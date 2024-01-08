@@ -1,88 +1,261 @@
-## Các nội dung cần nắm: (Roadmap)
-### I. Tổng quan về hệ điều hành
-1. Các thành phần của hệ điều hành
-- Quản lý tiến trình
-- Quản lý bộ nhớ
-- Quản lý hệ thống tập tin
-- Quản lý nhập xuất
-- Hệ thống dịch lệnh
-- Đảm bảo an toàn hệ thống
-- Quản lý mạng
+## 🍁 Overview of Operating Systems Course
 
-2. Phân loại hệ điều hành
-- Hệ thống xử lý theo lô
-- Hệ thống đa chương (multiprogram)
-- Hệ thống chia sẻ thời gian
-- Hệ thống song song
-- Hệ thống phân tán
-- Hệ thống thời gian thực
+```mermaid
+graph LR
+  A[OS]
+  B[Overview]
+  C[Processes]
+  D[Synchronization]
+  E[Scheduling]
+  F[Memory Management]
+  G[Input/Output Management]
+  H[File Management]
 
-3. Cấu trúc của hệ điều hành
-- Cấu trúc đơn giản
-- Cấu trúc phân lớp
-- Lõi nhân tối thiểu
-- Mô đun
+  A -->|Introduction| B
+  A -->|Processes| C
+  A -->|Synchronization| D
+  A -->|Scheduling| E
+  A -->|Memory Management| F
+  A -->|Input/Output Management| G
+  A -->|File Management| H
 
-4. Phần cứng máy tính
-- Bộ xử lý (processor)
-- Bộ nhớ (memory)
-- Ổ đĩa (disk)
-- Thiết bị nhập xuất (input/output devices)
-- Bus truyền
+  B -->|Concept of OS| I[Concept of OS]
+  B -->|Main Functions| J[Main Functions]
+  B -->|Components| K[Components]
+  B -->|Classification| L[Classification]
+  B -->|Structure| M[Structure]
+  B -->|History| N[History]
+  B -->|Computer Hardware| O[Computer Hardware]
 
-### II. Tiến trình
-1. Khối quản lý tiến trình (Process Control)
-- Thông tin trong một PCB
-- Vị trí lưu trữ PCB
+  C -->|Process Control Block| P[Process Control Block]
+  C -->|Process States| Q[Process States]
+  C -->|Threads| R[Threads]
+  C -->|Context Switching| S[Context Switching]
+  C -->|Accessing Kernel Procedures| T[Accessing Kernel Procedures]
+  C -->|Interprocess Communication| U[Interprocess Communication]
+  C -->|Interprocess Communication Across Machines| V[Interprocess Communication Across Machines]
 
-2. Trạng thái của tiến trình
+  D -->|Race Condition| W[Race Condition]
+  D -->|Critical Section| X[Critical Section]
+  D -->|Busy-Waiting Solutions| Y[Busy-Waiting Solutions]
+  D -->|Sleep and Wakeup Solutions| Z[Sleep and Wakeup Solutions]
+  D -->|Classical Synchronization Problems| AA[Classical Synchronization Problems]
+  D -->|Deadlocks| BB[Deadlocks]
 
-3. Tiểu trình (thread)
-- Mô hình đa tiểu trình
+  E -->|Introduction to Scheduling Problem| CC[Introduction to Scheduling Problem]
+  E -->|Scheduling in Batch Processing Systems| DD[Scheduling in Batch Processing Systems]
+  E -->|Scheduling in Interactive Systems| EE[Scheduling in Interactive Systems]
+  E -->|Scheduling in Real-Time Systems| FF[Scheduling in Real-Time Systems]
+  E -->|Thread Scheduling| GG[Thread Scheduling]
+  E -->|Scheduling in Multiprocessor Systems| HH[Scheduling in Multiprocessor Systems]
 
-4. Chuyển đổi ngữ cảnh (context switch)
+  F -->|Basics of Hardware Memory| II[Basics of Hardware Memory]
+  F -->|Basics of Memory Management| JJ[Basics of Memory Management]
+  F -->|Memory Swapping| KK[Memory Swapping]
+  F -->|Virtual Memory| LL[Virtual Memory]
+  F -->|Page Replacement Algorithms| MM[Page Replacement Algorithms]
+  F -->|Segmentation| NN[Segmentation]
 
-5. Truy xuất thủ tục trong nhân của hệ điều hành
-- Không gian người dùng và không gian hệ thống
-- Đường dẫn vào nhân hệ điều hành
-- Hàm hệ thống (system call)
-- Thao tác trên tiến trình
-- Cấp phát tài nguyên cho tiến trình
+  G -->|Basic Input/Output Devices| OO[Basic Input/Output Devices]
+  G -->|Input/Output Issues| PP[Input/Output Issues]
+  G -->|Software Layered I/O Model| QQ[Software Layered I/O Model]
+  G -->|I/O Management on Some Basic Devices| RR[I/O Management on Some Basic Devices]
 
-6. Giao tiếp giữa các tiến trình
-- Hệ thống chia sẻ vùng nhớ
-- Hệ thống thông điệp
+  H -->|User's Perspective| SS[User's Perspective]
+  H -->|Design Perspective| TT[Design Perspective]
 
-7. Giao tiếp tiến trình trên các máy khác nhau
-- Sockets
-- RPC
-
-### III. Đồng bộ
-1. Tranh đoạt điều khiển (race condition)
-2. Miền găng (critical section)
-3. Các giải pháp busy-waiting
-4. Giải pháp sleep and wakeup
-5. Các bài toán đồng bộ cổ điển
-6. Deadlocks
-
-### IV. Điều phối
-1. Điều phối trong hệ thống xử lý theo lô
-2. Điều phối trong hệ thống tương tác
-3. Điều phối trong hệ thống thời gian thực
-4. Điều phối tiểu trình
-5. Điều phối trong hệ thống nhiều bộ xử lý (multiprocessor)
-
-### V. Quản lý bộ nhớ
-1. Cơ bản về phần cứng
-2. Cơ bản về quản lý bộ nhớ
-3. Hoán đổi vùng nhớ
-4. Bộ nhớ ảo
-5. Các thuật toán thay trang
-6. Phân đoạn
-
-### VI. Quản lý nhập xuất
-
-### VII. Quản lý tập tin
+```
 
 
-_to be continued :wink:_
+
+### Chapter I: Overview
+1. **Concept of Operating Systems**
+2. **Main Functions of an Operating System**
+3. **Components of an Operating System**
+   - Process Management
+   - Memory Management
+   - File System Management
+   - Input/Output Management
+   - Command Interpreter
+   - System Security
+   - Network Management
+
+4. **Classification of Operating Systems**
+   - Batch Processing System
+   - Multiprogramming System
+   - Time-Sharing System
+   - Parallel System
+   - Distributed System
+   - Real-Time System
+
+5. **Structure of Operating Systems**
+   - Simple Structure
+   - Layered Structure
+   - Microkernel
+   - Modules
+
+6. **History of Operating System Development**
+
+7. **Computer Hardware**
+   - Processor (CPU)
+   - Memory (RAM)
+   - Disk Drive
+   - Input/Output Devices
+   - Bus Architecture
+
+### Chapter II: Processes
+1. **Process Control Block (PCB)**
+   - Information in a PCB
+   - Storage Location of PCB
+
+2. **Process States**
+
+3. **Threads**
+   - Overview
+   - Multithreading Model
+
+4. **Context Switching**
+
+5. **Accessing Kernel Procedures**
+   - User Space vs. Kernel Space
+   - Entry Points to the Kernel
+   - System Calls
+   - Process Operations
+   - Resource Allocation for Processes
+
+6. **Interprocess Communication**
+   - Shared Memory
+   - Message Passing
+
+7. **Interprocess Communication across Different Machines**
+   - Sockets
+   - Remote Procedure Call (RPC)
+
+### Chapter III: Synchronization
+1. **Race Condition**
+2. **Critical Section**
+3. **Busy-Waiting Solutions**
+   - Software Solutions:
+      + Using Flags
+      + Turn Variable
+      + Peterson's Solution
+   - Hardware Solutions:
+      + Disabling Interrupts
+      + Test and Set Instruction
+
+4. **Sleep and Wakeup Solutions**
+   - Semaphores
+   - Mutexes
+   - Monitors
+   - Message Passing
+   - Barriers
+
+5. **Classical Synchronization Problems**
+   - Dining Philosophers Problem
+   - Reader-Writer Problem
+   - Barber Shop Problem
+
+6. **Deadlocks**
+   - Resource Classification
+   - Introduction to Deadlock
+      + Conditions Leading to Deadlock
+      + Deadlock Modeling
+   - Ostrich Algorithm
+   - Detection and Recovery of Deadlocks
+   - Deadlock Avoidance
+   - Deadlock Prevention
+
+### Chapter IV: Scheduling
+- **Introduction to Scheduling Problem**
+  + Characteristics of Processes
+  + Scheduling Times
+  + Classification of Scheduling Algorithms
+  + Goals of Scheduling Algorithms
+
+1. **Scheduling in Batch Processing Systems**
+   - First Come First Served
+   - Shortest Job First
+   - Shortest Remaining Time Next
+   - Two-Level Scheduling
+
+2. **Scheduling in Interactive Systems**
+   - Round Robin Scheduling
+   - Priority Scheduling
+   - Multilevel Priority Scheduling
+   - Multilevel Queue Scheduling
+   - Shortest Task Next Scheduling
+   - Random Scheduling
+   - Fair Share Scheduling
+
+3. **Scheduling in Real-Time Systems**
+4. **Thread Scheduling**
+5. **Scheduling in Multiprocessor Systems**
+
+### Chapter V: Memory Management
+1. **Basics of Hardware Memory**
+2. **Basics of Memory Management**
+   - Single Partition
+   - Multiple Fixed Partitions
+   - Multiple Variable Partitions
+   - Multiprogramming Efficiency
+   - Address Relocation and Memory Protection
+
+3. **Memory Swapping**
+   - Bitmap-based Memory Management
+   - Linked List-based Memory Management
+
+4. **Virtual Memory**
+   - Paging
+   - Page Tables:
+      + Multilevel Page Tables
+      + Hashed Page Tables
+      + Page Table Entry Structure
+   - Translation Lookaside Buffers (TLBs)
+   - Inverted Page Tables
+
+5. **Page Replacement Algorithms**
+   - Optimal Page Replacement
+   - Not Recently Used (NRU)
+   - FIFO
+   - Second-Chance Algorithm
+   - Clock Algorithm
+   - Least Recently Used (LRU)
+   - Working Set Page Replacement Algorithm
+   - WSClock Page Replacement Algorithm
+
+6. **Segmentation**
+
+### Chapter VI: Input/Output Management
+1. **Basic Input/Output Devices**
+2. **Input/Output Issues**
+   - Data Transfer Modes
+   - Access Methods
+   - Communication Mechanisms:
+      + Programmed I/O
+      + Interrupt-driven I/O
+      + Direct Memory Access (DMA)
+   - Data Transfer Modes
+   - Other Issues
+
+3. **Software Layered I/O Model**
+   - Interrupt Manager
+   - Device Drivers
+   - Independent Device Component
+   - User-Program Interface Component
+   - I/O Request Processing
+
+4. **I/O Management on Some Basic Devices**
+
+### Chapter VII: File Management
+1. **User's Perspective**
+   - File
+   - Directory
+   - File System
+   - Disk Storage Organization
+
+2. **Design Perspective**
+   - Disk File System Organization
+   - Organization of Some File Systems:
+      + FAT
+      + NTFS
+      + UNIX/Linux File System
